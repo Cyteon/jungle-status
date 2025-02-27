@@ -2,7 +2,7 @@
 
 APP_NAME_UNFORMATTED="Jungle Status Site"
 APP_NAME="jungle-status-site"
-DEFAULT_PORT=44275
+DEFAULT_PORT=32915
 PORT=${1:-$DEFAULT_PORT}
 
 echo "Starting $APP_NAME_UNFORMATTED on port $PORT"
