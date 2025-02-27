@@ -44,4 +44,4 @@ setInterval(() => {
             console.error(e);
         }
     });
-}, 3000); // 5 minutes
+}, 300000); // 5 minutes
