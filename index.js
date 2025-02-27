@@ -1,8 +1,8 @@
 import { spawn, spawnSync } from "child_process";
 import fs from "fs";
 
-spawn("npm", ["run", "dev"], { stdio: "inherit" });
-//const proccess = spawn("npm", ["run", "start"], { stdio: "inherit" });
+spawnSync("npm", ["run", "build"], { stdio: "inherit" });
+spawn("node", ["build/index.js"], { stdio: "inherit" });
 
 setInterval(() => {
     const jsonFile = fs.readFileSync("data.json", "utf8");
