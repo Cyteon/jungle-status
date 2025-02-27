@@ -40,7 +40,13 @@ export async function POST({ request }) {
     }
 
     const data = JSON.parse(jsonFile);
-    data[userData.sub] = { access_token, jungle_token: null, enabled: false };
+
+    if (data[userData.sub]) {
+        data[userData.sub].access_token = access_token;
+    } else {
+        data[userData.sub] = { access_token, jungle_token: null, enabled: false };
+    }
+
     await fs.promises.writeFile('data.json', JSON.stringify(data));
 
     return Response.json({ access_token, id_token });
