@@ -29,6 +29,8 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@catppuccin/tailwindcss": "^0.1.6"
+		"@catppuccin/tailwindcss": "^0.1.6",
+		"jwt-decode": "^4.0.0",
+		"typescript-cookie": "^1.0.6"
 	}
 }
