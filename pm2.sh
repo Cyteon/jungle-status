@@ -7,11 +7,9 @@ PORT=${1:-$DEFAULT_PORT}
 
 echo "Starting $APP_NAME_UNFORMATTED on port $PORT"
 
-npm run build
-
 export PORT=$PORT
 
-pm2 delete doubloon-leaderboard
+pm2 delete "$APP_NAME"
 pm2 start index.js --name "$APP_NAME"
 pm2 save
 
