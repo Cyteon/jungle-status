@@ -24,7 +24,7 @@ setInterval(() => {
                 const tokens = json.userData.totalTokens + json.userData.totalRedeemableTokens;
                 const text = `${(tokens / 10.6).toFixed(2)}$ on #jungle`;
 
-                const res2 = await fetch(`https://hackclub.slack.com/api/users.profile.set`, {
+                await fetch(`https://hackclub.slack.com/api/users.profile.set`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
