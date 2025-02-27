@@ -43,7 +43,5 @@ export async function POST({ request }) {
     data[userData.sub] = { access_token, jungle_token: null, enabled: false };
     await fs.promises.writeFile('data.json', JSON.stringify(data));
 
-    console.log(access_token, id_token);
-
     return Response.json({ access_token, id_token });
 }

@@ -5,6 +5,8 @@ spawnSync("npm", ["run", "build"], { stdio: "inherit" });
 spawn("node", ["build/index.js"], { stdio: "inherit" });
 
 setInterval(() => {
+    console.log("Updating statuses...");
+
     const jsonFile = fs.readFileSync("data.json", "utf8");
     const data = JSON.parse(jsonFile);
 
